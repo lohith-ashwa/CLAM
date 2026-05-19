@@ -16,8 +16,7 @@
 pip3 install scipy --break-system-packages 2>/dev/null || pip3 install scipy
 
 # Hugging Face token for Virchow2 model download
-export HF_TOKEN=$HF_Token
-
+export HF_TOKEN=$HF_TOKEN
 cd ~/CLAM
 
 # Pipe 'Y' to bypass the interactive confirmation prompt
