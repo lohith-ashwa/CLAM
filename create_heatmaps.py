@@ -216,12 +216,16 @@ if __name__ == '__main__':
         else:
             top_left = None
             bot_right = None
-        
+
         print('slide id: ', slide_id)
         print('top left: ', top_left, ' bot right: ', bot_right)
 
         if isinstance(data_args.data_dir, str):
             slide_path = os.path.join(data_args.data_dir, slide_name)
+            if not os.path.exists(slide_path):
+                # Support nested structure: data_dir/slide_id/slide_name
+                slide_path = os.path.join(data_args.data_dir, slide_id, slide_name)
+
         elif isinstance(data_args.data_dir, dict):
             data_dir_key = process_stack.loc[i, data_args.data_dir_key]
             slide_path = os.path.join(data_args.data_dir[data_dir_key], slide_name)
@@ -229,7 +233,7 @@ if __name__ == '__main__':
             raise NotImplementedError
 
         mask_file = os.path.join(r_slide_save_dir, slide_id+'_mask.pkl')
-        
+
         # Load segmentation and filter parameters
         seg_params = def_seg_params.copy()
         filter_params = def_filter_params.copy()
@@ -361,7 +365,7 @@ if __name__ == '__main__':
         save_path = os.path.join(r_slide_save_dir, '{}_{}_roi_{}.h5'.format(slide_id, patch_args.overlap, heatmap_args.use_roi))
 
         if heatmap_args.use_ref_scores:
-            ref_scores = scores
+            ref_scores = scores.flatten()
         else:
             ref_scores = None
         

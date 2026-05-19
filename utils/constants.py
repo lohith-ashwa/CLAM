@@ -22,5 +22,10 @@ MODEL2CONSTANTS = {
     {
 		"mean": IMAGENET_MEAN,
 		"std": IMAGENET_STD
-	}
+	},
+    "virchow_v2": 
+    {
+        "mean": IMAGENET_MEAN,
+        "std": IMAGENET_STD
+    }
 }

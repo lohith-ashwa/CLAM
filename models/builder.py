@@ -62,6 +62,26 @@ def get_encoder(model_name, target_img_size=224):
         titan = AutoModel.from_pretrained('MahmoodLab/TITAN', trust_remote_code=True)
         model, _ = titan.return_conch()
         assert target_img_size == 448, 'TITAN is used with 448x448 CONCH v1.5 features'
+    elif model_name == 'virchow_v2':
+        from timm.layers import SwiGLUPacked
+        _base = timm.create_model("hf-hub:paige-ai/Virchow2",
+                                  pretrained=True,
+                                  mlp_layer=SwiGLUPacked,
+                                  act_layer=torch.nn.SiLU)
+        _base.eval()
+
+        class Virchow2Wrapper(torch.nn.Module):
+            """Wraps Virchow2 to output CLS + mean(patch_tokens) = 2560-d."""
+            def __init__(self, base):
+                super().__init__()
+                self.base = base
+            def forward(self, x):
+                out = self.base(x)                    # (B, 261, 1280)
+                cls_token = out[:, 0]                 # (B, 1280)
+                patch_tokens = out[:, 5:]             # (B, 256, 1280) — skip 4 register tokens
+                return torch.cat([cls_token, patch_tokens.mean(1)], dim=-1)  # (B, 2560)
+
+        model = Virchow2Wrapper(_base)
     else:
         raise NotImplementedError('model {} not implemented'.format(model_name))
     

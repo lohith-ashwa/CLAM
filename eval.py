@@ -39,7 +39,7 @@ parser.add_argument('--fold', type=int, default=-1, help='single fold to evaluat
 parser.add_argument('--micro_average', action='store_true', default=False, 
                     help='use micro_average instead of macro_avearge for multiclass AUC')
 parser.add_argument('--split', type=str, choices=['train', 'val', 'test', 'all'], default='test')
-parser.add_argument('--task', type=str, choices=['task_1_tumor_vs_normal',  'task_2_tumor_subtyping'])
+parser.add_argument('--task', type=str, choices=['task_1_tumor_vs_normal',  'task_2_tumor_subtyping', 'bone_sex'])
 parser.add_argument('--drop_out', type=float, default=0.25, help='dropout')
 parser.add_argument('--embed_dim', type=int, default=1024)
 args = parser.parse_args()
@@ -89,6 +89,18 @@ elif args.task == 'task_2_tumor_subtyping':
                             label_dict = {'subtype_1':0, 'subtype_2':1, 'subtype_3':2},
                             patient_strat= False,
                             ignore=[])
+    
+elif args.task == 'bone_sex':
+    args.n_classes = 2
+    dataset = Generic_MIL_Dataset(
+        csv_path='dataset_csv/bone_sex_classification.csv',
+        data_dir=os.path.join(args.data_root_dir, 'clam_data'),
+        shuffle=False,
+        print_info=True,
+        label_dict={'M': 0, 'F': 1},
+        patient_strat=False,
+        ignore=[]
+    )
 
 # elif args.task == 'tcga_kidney_cv':
 #     args.n_classes=3
