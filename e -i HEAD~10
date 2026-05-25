@@ -1,0 +1,124 @@
+[33mf348a53[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m Sex classification
+[33m17e4819[m Sex classification
+[33m53e2409[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update README.md
+[33mf1e9394[m add support for CONCH v1.5
+[33m24ddf79[m add support for CONCH v1.5
+[33m8455dc8[m Merge pull request #244 from shubhaminnani/shubhaminnani-eval-fix
+[33mbf70591[m correct import for get_eval_transforms
+[33m3bf2a7b[m added missing args
+[33m206bf2d[m Update README.md
+[33mfc26d3e[m Update README.md
+[33m08bc929[m bug fix: CLAM_MB
+[33mde133ca[m Merge branch 'master' of https://github.com/mahmoodlab/CLAM
+[33mead5d8f[m fix invalid import
+[33m610f498[m Update README.md
+[33mabab599[m Update README.md
+[33m14fbcc4[m fix: feature extraction refactor
+[33m6873ed5[m Update env.yml
+[33m27d4d48[m Update README.md
+[33mee3764a[m Update README.md
+[33m899ab1f[m Update README.md
+[33m8a41142[m Update README.md
+[33m34611cb[m update readme
+[33m77d05ff[m Merge pull request #235 from mahmoodlab/latest
+[33md613a3d[m add support for UNI/CONCH
+[33m2e5bb7d[m update README: uni and conch
+[33m38449ae[m Update README.md
+[33m3f875f7[m Update README.md
+[33me02d26b[m Update README.md
+[33m26e0b6c[m Merge pull request #199 from scjjb/patch-4
+[33m1425417[m Update WholeSlideImage.py
+[33m9482cbc[m Merge pull request #158 from scjjb/patch-4
+[33mc4d24de[m Merge pull request #156 from scjjb/patch-3
+[33mcc10f76[m Typo fix in parser help
+[33m8d2df53[m Fix minor typo in printout
+[33m6fbcaa3[m Merge branch 'master' of https://github.com/mahmoodlab/CLAM
+[33m5c17108[m non-event
+[33m1a92ef2[m Merge pull request #124 from scjjb/patch-1
+[33m82a8a13[m Remove outdated code
+[33mbdd460b[m to satisfy opencv pointPolygonTest
+[33m3a76e43[m Update README.md
+[33mca20f85[m Update README.md
+[33mc3a7ca1[m Update WholeSlideImage.py
+[33m39b6c5c[m Update README.md
+[33m5efe3ea[m Merge pull request #90 from andrew-weisman/datatype_comparison_bug-2021-12-01
+[33m33c3853[m Isolate fix for datatype comparison bug
+[33m5705cff[m Get training working and fix a datatype comparison bug
+[33ma7b2d22[m Start making changes to main.py per CLAM GitHub README
+[33m3facc8d[m Update README.md
+[33m7967aac[m Update extract_features_fp.py
+[33m7d0e41b[m Update core_utils.py
+[33me37eb3b[m Merge pull request #73 from keithcallenberg/patch-2
+[33m9c42569[m Merge pull request #74 from keithcallenberg/patch-3
+[33m8e2a8e5[m fix typo in create_heatmaps.py
+[33m8572a5d[m update import of smoothtop1svm in core_utils
+[33m53627e0[m update import of SmoothTop1SVM in core_utils
+[33m485e4c0[m Update create_heatmaps.py
+[33mb265e16[m Update create_heatmaps.py
+[33m0d22dca[m Merge pull request #66 from keithcallenberg/patch-1
+[33m6a410d9[m Minor typo fix in readme
+[33m6fd0332[m update README
+[33md1ebea1[m fix: missing ckpt for heatmap demo
+[33mc10eb89[m Merge pull request #58 from Richarizardd/patch-2
+[33ma907cdf[m Update README.md
+[33m825d0d6[m Merge branch 'master' of https://github.com/mahmoodlab/CLAM
+[33m5faf04c[m add heatmap visualization
+[33m2dc17a8[m Update INSTALLATION.md
+[33mb1d84f7[m Update README.md
+[33mecb8709[m Update README.md
+[33m6368194[m Update README.md
+[33md822118[m Update README.md
+[33m8890c87[m Update create_splits_seq.py
+[33m6125a97[m Update README.md
+[33m11ee6a0[m bug fix: remove legacy argument
+[33m0204d91[m remove legacy comments
+[33mc8fe4dd[m Update README.md
+[33m70390e9[m fix: borken readme link
+[33m80ba925[m bug fix: vis_level = -1
+[33mb145295[m comments
+[33m4ceaf12[m Merge branch 'master' of https://github.com/mahmoodlab/CLAM
+[33m9230a25[m clean up
+[33m4174589[m Update README.md
+[33mde1cd69[m update default vis_level
+[33ma16108d[m update fast patching/feature extraction pipeline
+[33m7e24b44[m update fast patching/feature extraction pipeline
+[33m396bddb[m allow df initialization from custon csv files
+[33m2448486[m Update README.md
+[33m3c60cc4[m Update README.md
+[33mfab8bad[m Update README.md
+[33m5d31ed6[m Update dataset_generic.py
+[33mce70fd0[m Update main.py
+[33m041f5a9[m update readme
+[33ma126ee3[m add scaling functionality, add comments
+[33m718c523[m Update README.md
+[33mb75304f[m Update README.md
+[33mffee050[m Update README.md
+[33mad4d102[m update readme
+[33m373053b[m update
+[33m4a6cc57[m Update core_utils.py
+[33md0aabc8[m fix: load weights before transfer to gpu
+[33m5f46b5c[m fix: checkpoint loaded incorrectly if using multi-gpu for training and single-gpu for inference
+[33m13cf636[m downgrade setuptools version for compatability w/ openslide-python
+[33m4a83043[m Update README.md
+[33m4ed30d1[m Update README.md
+[33m4ec071d[m remove legacy pytiff dependency
+[33m54af7e0[m Merge branch 'master' of https://github.com/mahmoodlab/CLAM
+[33m269f1a7[m fix support for passing custom test ids
+[33m63bfe39[m Update README.md
+[33me64f17f[m Update README.md
+[33m9069a33[m remove debuging breakpoints
+[33m9722514[m remove dummy default args
+[33mb65a2a0[m cleanup unneeded argument
+[33md1c7e55[m remove unneeded imports
+[33mdd5baa2[m remove unneeded imports
+[33m35d65fb[m remove duplicate function call
+[33m2cfffc6[m more info about model arguments
+[33mdfc1a89[m fix: do not create empty directory for incorrect source data_dir
+[33m404ba92[m remove legacy imports
+[33mccc5120[m remove legacy testing function
+[33m86eee96[m remove legacy init argument
+[33m7bacc0d[m fix: invalid size arg passed to mil
+[33mecf4a0f[m update installation guide
+[33md847da9[m fix: added missing yml file
+[33mfce01ad[m clarify command line arguments
+[33me065b1c[m init

@@ -23,8 +23,8 @@ CUDA_VISIBLE_DEVICES=0 python3 main.py \
     --drop_out 0.25 \
     --early_stopping \
     --lr 2e-4 \
-    --k 5 \
-    --exp_code bone_sex_clam_sb_virchow2_2 \
+    --k 15 \
+    --exp_code bone_sex_clam_sb_virchow2_5 \
     --weighted_sample \
     --bag_loss ce \
     --inst_loss svm \
@@ -33,5 +33,5 @@ CUDA_VISIBLE_DEVICES=0 python3 main.py \
     --log_data \
     --data_root_dir /data/pathology/projects/lohith \
     --embed_dim 2560 \
-    --split_dir bone_sex_classification \
+    --split_dir bone_sex_classification_lopo \
     --results_dir /data/pathology/projects/lohith/clam_results

@@ -210,7 +210,7 @@ def train(datasets, cur, args):
         acc, correct, count = acc_logger.get_summary(i)
         print('class {}: acc {}, correct {}/{}'.format(i, acc, correct, count))
 
-        if writer:
+        if writer and acc is not None:
             writer.add_scalar('final/test_class_{}_acc'.format(i), acc, 0)
 
     if writer:
@@ -384,7 +384,7 @@ def validate(cur, epoch, model, loader, n_classes, early_stopping = None, writer
 
     if early_stopping:
         assert results_dir
-        early_stopping(epoch, -auc, model, ckpt_name = os.path.join(results_dir, "s_{}_checkpoint.pt".format(cur)))
+        early_stopping(epoch, val_loss, model, ckpt_name = os.path.join(results_dir, "s_{}_checkpoint.pt".format(cur)))
         
         if early_stopping.early_stop:
             print("Early stopping")
@@ -474,7 +474,7 @@ def validate_clam(cur, epoch, model, loader, n_classes, early_stopping = None, w
 
     if early_stopping:
         assert results_dir
-        early_stopping(epoch, -auc, model, ckpt_name = os.path.join(results_dir, "s_{}_checkpoint.pt".format(cur)))
+        early_stopping(epoch, val_loss, model, ckpt_name = os.path.join(results_dir, "s_{}_checkpoint.pt".format(cur)))
         
         if early_stopping.early_stop:
             print("Early stopping")
