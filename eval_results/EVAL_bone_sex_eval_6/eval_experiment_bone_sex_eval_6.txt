@@ -1,0 +1,1 @@
+{'task': 'bone_sex', 'split': 'test', 'save_dir': './eval_results/EVAL_bone_sex_eval_6', 'models_dir': '/data/pathology/projects/lohith/clam_results/bone_sex_clam_sb_virchow2_6_s1', 'model_type': 'clam_sb', 'drop_out': 0.25, 'model_size': 'small'}

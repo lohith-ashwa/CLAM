@@ -20,11 +20,12 @@ cd ~/CLAM
 
 # ── Train CLAM-SB on all Folds ── 
 CUDA_VISIBLE_DEVICES=0 python3 main.py \
-    --drop_out 0.25 \
+    --drop_out 0.5 \
     --early_stopping \
-    --lr 2e-4 \
+    --lr 1e-4 \
+    --reg 1e-4 \
     --k 15 \
-    --exp_code bone_sex_clam_sb_virchow2_5 \
+    --exp_code bone_sex_clam_sb_virchow2_6 \
     --weighted_sample \
     --bag_loss ce \
     --inst_loss svm \
